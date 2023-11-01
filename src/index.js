@@ -9,7 +9,8 @@ const PORT = 8080;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api", productRouter, cartRouter);
+app.use("/api", productRouter);
+app.use("/api", cartRouter);
 
 app.listen(PORT, () => {
     console.log(`Server running in http://localhost:${PORT}`);

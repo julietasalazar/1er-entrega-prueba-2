@@ -1,1 +1,17 @@
-[{"title":"cuaderno","id":"04e13d39-1cf2-4a5a-b9a1-ae94a186f4db"}]
+[
+	{
+		"title": "cuaderno",
+		"id": "9b69024e-0609-4d06-871b-cd4fbfc9de86"
+	},
+	{
+		"id": "14a8e6ae-249d-4f2d-ae3d-ad1ad4e53e5c",
+		"title": "cuaderno 2",
+		"description": "cuaderno tapa dura",
+		"code": 2,
+		"price": 200,
+		"status": true,
+		"stock": 20,
+		"category": "libería",
+		"thumbnails": []
+	}
+]
