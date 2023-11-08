@@ -27,12 +27,12 @@ class CartManager {
         }
     }
 
-    async exist(id){
+    async exist(id) {
         const carts = await this.getJsonFromFile();
         return carts.find(cart => cart.id === id);
     };
 
-    async addCart () {
+    async addCart() {
         const prevCarts = await this.getJsonFromFile();
         const id = uuidv4();
         const cartsList = [{ id: id, products: [] }, ...prevCarts];
@@ -53,24 +53,31 @@ class CartManager {
         if (!product) return "Producto no encontrado";
 
         const cartsList = await this.getJsonFromFile();
-        const cartFilter = cartsList.filter((c) = c.id !== cartId);
+        const cartFilter = cartsList.filter((c) => c.id !== cartId);
 
         if (cart.products.some((prod) => prod.id === productId)) {
-            const addedProduct = cart.products.find(prod => prod.id === productId);
+            const addedProduct = cart.products.find((prod) => prod.id === productId);
             addedProduct.quantity += 1;
             const updatedCart = [cart, ...cartFilter];
             await this.saveJsonInFile(updatedCart);
-            return "Producto sumado al carrito"
-        } else {
+            return "Producto sumado al carrito";
+        } 
             cart.products.push({ id: product.id, quantity: 1 });
-            const updatedCart = [{ id: cartId, products: [] }, ...cartFilter];
+            const updatedCart = [cart, ...cartFilter];
             await this.saveJsonInFile(updatedCart);
             return "Producto agregado al carrito";
-        };
+   
 
-        
+
     };
 
 }
 
 export default CartManager
+
+// } else {
+//     // cart.products.push({ id: product.id, quantity: 1 });
+//     const updatedCart = [{ id: cartId, products: [{ id: product.id, quantity: 1 }] }, ...cartFilter];
+//     await this.saveJsonInFile(updatedCart);
+//     return "Producto agregado al carrito";
+// };

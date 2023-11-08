@@ -13,5 +13,27 @@
 		"stock": 20,
 		"category": "libería",
 		"thumbnails": []
+	},
+	{
+		"id": "76fc5b04-f0df-4af5-aaff-2612e0b1da8e",
+		"title": "cuaderno 3",
+		"description": "cuaderno tapa blanda",
+		"code": 3,
+		"price": 100,
+		"status": true,
+		"stock": 20,
+		"category": "libería",
+		"thumbnails": []
+	},
+	{
+		"id": "29b21fdd-6a67-472c-bd15-83df9686ea24",
+		"title": "cuaderno 4",
+		"description": "cuaderno anillado",
+		"code": 4,
+		"price": 300,
+		"status": true,
+		"stock": 20,
+		"category": "libería",
+		"thumbnails": []
 	}
 ]
